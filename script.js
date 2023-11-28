@@ -4,7 +4,7 @@ const app = express();
 app.set('view engine','ejs');
 
 app.get('/',function(req,res){
-    res.render("index", {name: 'Akbar'});
+    res.render("index", {name: 'Akbar',city: 'Karachi'});
 });
 
 // app.use(function(req,res,next){
