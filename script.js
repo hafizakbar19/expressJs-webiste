@@ -18,7 +18,7 @@ app.get('/',function(req,res){
 // })
 
 app.get('/:username',function(req,res){
-    res.send(`hello from ${req.params.username}`)
+    res.render('contact');
 });
 
 app.listen(3000);
