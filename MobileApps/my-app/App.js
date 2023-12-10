@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button} from 'react-native';
+// ...rest of the import statements remain unchanged
+import * as ImagePicker from 'expo-image-picker'; 
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello Ahmed Welcome to App</Text>
-      <Button title='Tap me' onPress={()=> alert('button pressed!')}></Button>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const pickImageAsync = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      quality: 1,
+    });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    if (!result.canceled) {
+      console.log(result);
+    } else {
+      alert('You did not select any image.');
+    }
+  };
+
+  // ...rest of the code remains same
+}
