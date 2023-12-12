@@ -3,6 +3,7 @@ import USobject from './USobject'
 import USarray from './USarray'
 import UEffectHook from './UEffectHook'
 import CompC from './CompC';
+import ControlledComp from './ControlledComp';
 
 
 export const NameContext = createContext();
@@ -13,9 +14,10 @@ function App() {
     <div>
       {/* <USobject/> */}
       {/* <UEffectHook/> */}
-      <NameContext.Provider value={name}>
+      {/* <NameContext.Provider value={name}>
         <CompC/>
-      </NameContext.Provider>
+      </NameContext.Provider> */}
+      <ControlledComp/>
     </div>
   )
 }
