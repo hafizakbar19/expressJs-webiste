@@ -1,32 +1,19 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-export default class ControlledComp extends Component {
+function ControlledComp() {
+    const [name, setName] = useState('Akbar');
 
-    constructor(props) {
-      super(props)
-      this.state = {
-         user: 'Akbar'
-      }
-    }
-
-   const changeHandler = (e) => {
-        this.setState(
-            {user: e.target.value}
-        )
-        }
-
-  render() {
-    return (
-      <div>
-      <h1>{this.state.user}</h1>
+  return (
+    <div>
         <form>
-            <label htmlFor='userName'>Enter User Name: </label>
-            <br/>
-            <input name='userName' type='text' value={this.state.user} onChange={changeHandler}/>
-            <br/>
-            <input type='submit' value='submit'/>
+            <label htmlFor='userName'>Enter Name: </label>
+            <br />
+            <input type='text' name='userName' value={name} onChange={}/>
+            <br />
+            <input type='submit' value='Submit' />
         </form>
-      </div>
-    )
-  };
+    </div>
+  )
 }
+
+export default ControlledComp
