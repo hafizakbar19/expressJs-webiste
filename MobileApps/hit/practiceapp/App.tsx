@@ -9,20 +9,23 @@ import {
   Alert
 } from 'react-native';
 
-const handler = () => Alert.alert('message',"hello")
 function App(){
 
   const isDarkMode = useColorScheme() === 'dark';
 
+  const handler = () => {
+    Alert.alert('Message', 'Hello', [
+      { text: 'OK', onPress: () => console.log('OK Pressed') }
+    ]);
+  };
 
-  return(
-
-      <View style={styles.container}>
-        <Text style={isDarkMode ? styles.whiteText : styles.blackText}>Hello World !</Text>
-        <Text>Welcome to my new App</Text>
-        <Pressable onPressIn={handler} style={styles.button}><Text style={{color: 'white'}}>Click me!</Text></Pressable>
-      </View>
-  )
+  return (
+    <View style={styles.container}>
+      <Text style={isDarkMode ? styles.whiteText : styles.blackText}>Hello World !</Text>
+      <Text>Welcome to my new App</Text>
+      <Pressable onPress={handler} style={styles.button}><Text style={{color: 'white'}}>Click me!</Text></Pressable>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -44,6 +47,6 @@ const styles = StyleSheet.create({
     margin: 5,
     padding: 5
   }
-})
+});
 
 export default App;
