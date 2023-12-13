@@ -5,19 +5,22 @@ import {
   Text,
   Pressable,
   StyleSheet,
-  useColorScheme
+  useColorScheme,
+  Alert
 } from 'react-native';
 
+const handler = () => Alert.alert('message',"hello")
 function App(){
 
   const isDarkMode = useColorScheme() === 'dark';
 
+
   return(
 
       <View style={styles.container}>
-        <Text style={isDarkMode ? styles.whiteText : styles.blackText}>Hello world!</Text>
+        <Text style={isDarkMode ? styles.whiteText : styles.blackText}>Hello World !</Text>
         <Text>Welcome to my new App</Text>
-        <Pressable style={styles.button}><Text style={{color: 'white'}}>Click me!</Text></Pressable>
+        <Pressable onPressIn={handler} style={styles.button}><Text style={{color: 'white'}}>Click me!</Text></Pressable>
       </View>
   )
 }
