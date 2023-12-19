@@ -4,6 +4,7 @@ import USarray from './USarray'
 import UEffectHook from './UEffectHook'
 import CompC from './CompC';
 import ControlledComp from './ControlledComp';
+import AlltypeForm from './AlltypeForm';
 
 
 export const NameContext = createContext();
@@ -17,7 +18,8 @@ function App() {
       {/* <NameContext.Provider value={name}>
         <CompC/>
       </NameContext.Provider> */}
-      <ControlledComp/>
+      {/* <ControlledComp/> */}
+      <AlltypeForm />
     </div>
   )
 }
