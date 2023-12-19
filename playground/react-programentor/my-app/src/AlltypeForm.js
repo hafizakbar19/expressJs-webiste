@@ -6,10 +6,13 @@ function AlltypeForm() {
     const submitHandler = (e) => {
         console.log(e.target[0].value);
         e.preventDefault();
-        console.log(e.target[1].value)
+        console.log(e.target[1].value);
+        console.log(e.target[2].checked)
     };
 
-    const [selectMenu, setSelectMenu] = useState('Pakistan')
+    const [selectMenu, setSelectMenu] = useState('Pakistan');
+
+    const [check, setCheck] = useState(false);
 
   return (
     <div>
@@ -24,6 +27,9 @@ function AlltypeForm() {
                 <option value="China">China</option>
                 <option value="Russia">Russia</option>
             </select>
+            <br />
+            <label htmlFor="">Agree the terms and conditions</label>
+            <input type="checkbox" name="" id="" checked={check} onChange={(e) =>setCheck(e.target.checked)} />
             <br />
             <input type="submit" value="Send" />
         </form>
