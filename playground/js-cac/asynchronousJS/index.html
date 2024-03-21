@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JS</title>
+</head>
+<body>
+    <h1>practice</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+<script>
+    let work;
+
+    document.getElementById("start").addEventListener('click',()=>{
+        work = setInterval(() => {
+            console.log("akbar", Date.now());
+        }, 1000);
+    });
+
+    document.getElementById("stop").addEventListener("click",()=>{
+        clearInterval(work);
+    });
+</script>
+</body>
+</html>

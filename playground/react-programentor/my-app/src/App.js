@@ -5,6 +5,7 @@ import UEffectHook from './UEffectHook'
 import CompC from './CompC';
 import ControlledComp from './ControlledComp';
 import AlltypeForm from './AlltypeForm';
+import MultipleCB from './MultipleCB';
 
 
 export const NameContext = createContext();
@@ -19,7 +20,8 @@ function App() {
         <CompC/>
       </NameContext.Provider> */}
       {/* <ControlledComp/> */}
-      <AlltypeForm />
+      {/* <AlltypeForm /> */}
+      <MultipleCB />
     </div>
   )
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="images">
+      <li><img width="80px" src="./pic1.jpg" id="pic1" /></li>
+      <li><img width="80px" src="./pic2.jpg" id="pic2" /></li>
+      <li><img width="80px" src="./pic3.jpg" id="pic3" /></li>
+      <li><img width="80px" src="./pic4.jpg" id="pic4" /></li>
+      <li><img width="80px" src="./pic5.jpg" id="pic5" /></li>
+      <li><img width="80px" src="./pic6.jpg" id="pic6" /></li>
+    </ul>
+  </body>
+  <script>
+
+    document.getElementById("images").addEventListener("click", (e)=>{
+        if(e.target.tagName === "IMG"){
+            e.target.parentNode.remove()
+        }
+        })
+    document.getElementById("pic2").addEventListener("click", (e)=>{
+        console.log("clicked pic2")
+        // e.stopPropagation()
+    },true)
+  </script>
+</html>
