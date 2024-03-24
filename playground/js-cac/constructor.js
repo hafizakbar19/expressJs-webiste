@@ -1,3 +1,5 @@
+//constructor function
+
 function User (userName, age, city, isLoggedIn){
     this.userName = userName,
     this.age = age,
